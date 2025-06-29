@@ -1,7 +1,7 @@
-import logo from '../images/logo.png'
+import logo from "../assets/images/logos/logo.png";
 
 const Logo = () => {
-    return <img className='max-w-40' src={logo} alt="Logo Freneticars" />
-}
+  return <img className="max-w-40" src={logo} alt="Logo Freneticars" />;
+};
 
-export default Logo
+export default Logo;

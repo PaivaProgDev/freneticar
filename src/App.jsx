@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/home/Home";
 import Gallery from "./pages/Gallery";
-import WhatsappLogo from "./images/whatsapp-logo.png";
+import WhatsappLogo from "./assets/images/logos/whatsapp-logo.png";
 import About from "./pages/about/About";
 
 function App() {

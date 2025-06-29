@@ -40,7 +40,7 @@ const Collections = ({
       brand: "Bugatti",
       hp: "670 CV • 0-100 em 3.0s",
       price: "50.000.000",
-      image: "../../images/cars/Bugatti-blue.png",
+      image: "/images/cars/Bugatti-blue.png",
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const Collections = ({
       brand: "Lamborghini",
       hp: "630 CV • 0-100 em 3.2s",
       price: "2.200.200",
-      image: "/src/images/cars/Huracan.png",
+      image: "/images/cars/Huracan.png",
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const Collections = ({
       brand: "McLaren",
       hp: "720 CV • 0-100 em 2.8s",
       price: "3.500.000",
-      image: "/src/images/cars/720s.png",
+      image: "/images/cars/720s.png",
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const Collections = ({
       brand: "Audi",
       hp: "610 CV • 0-100 em 3.2s",
       price: "2.069.831",
-      image: "/src/images/cars/Audi-r8.png",
+      image: "/images/cars/Audi-r8.png",
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ const Collections = ({
       brand: "Aston Martin",
       hp: "700 CV • 0-100 em 3.5s",
       price: "3.200.000",
-      image: "/src/images/cars/Aston-vantage.png",
+      image: "/images/cars/Aston-vantage.png",
     },
   ];
 
