@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Chiron",
+    "brand": "Bugatti",
+    "hp": "670 CV • 0-100 em 3.0s",
+    "price": "50.000.000",
+    "image": "/images/cars/Bugatti-blue.png"
+  },
+  {
+    "id": 2,
+    "name": "Aventador",
+    "brand": "Lamborghini",
+    "hp": "770 CV • 0-100 em 2.8s",
+    "price": "9.000.000",
+    "image": "/images/cars/Aventador.png"
+  },
+  {
+    "id": 3,
+    "name": "Huracán",
+    "brand": "Lamborghini",
+    "hp": "630 CV • 0-100 em 3.2s",
+    "price": "2.200.200",
+    "image": "/images/cars/Huracan.png"
+  },
+  {
+    "id": 4,
+    "name": "Sterrato",
+    "brand": "Lamborghini",
+    "hp": "610 CV • 0-100 em 3.4s",
+    "price": "4.400.000",
+    "image": "/images/cars/Sterrato.png"
+  },
+  {
+    "id": 5,
+    "name": "720s",
+    "brand": "McLaren",
+    "hp": "720 CV • 0-100 em 2.8s",
+    "price": "3.500.000",
+    "image": "/images/cars/720s.png"
+  },
+  {
+    "id": 6,
+    "name": "R8",
+    "brand": "Audi",
+    "hp": "610 CV • 0-100 em 3.2s",
+    "price": "2.069.831",
+    "image": "/images/cars/Audi-r8.png"
+  },
+  {
+    "id": 7,
+    "name": "Vantage",
+    "brand": "Aston Martin",
+    "hp": "700 CV • 0-100 em 3.5s",
+    "price": "3.200.000",
+    "image": "/images/cars/Aston-vantage.png"
+  }
+]
