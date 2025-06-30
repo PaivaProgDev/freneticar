@@ -13,9 +13,7 @@ const Header = () => {
                     menuIsOpen ? <X onClick={handleOpeningModal} className='cursor-pointer' /> : <Menu onClick={handleOpeningModal} className='cursor-pointer' />
                 }
             </div>
-            <div className={`${menuIsOpen ? 'translate-0 duration-700' : '-translate-x-full duration-700'} bg-[#f3f4f6] fixed w-70 h-full transition-transform `}>
-                <NavigationTag />
-            </div>
+            <NavigationTag />
         </header>
     )
 }

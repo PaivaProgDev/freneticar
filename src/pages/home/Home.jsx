@@ -75,7 +75,7 @@ const Home = () => {
           Confira os nossos queridos da casa, aqui nosso lema é qualidade,
           velocidade e segurança!
         </p>
-        <Collections previewHome={true} />
+        <Collections previewHome />
         <Link to={"/gallery"}>
           <Button className={"mt-16"}>
             Ver todos os veículos

@@ -144,17 +144,17 @@ const Collections = ({
       <div className="flex flex-col gap-8 mt-12">
         {activatedCardList.length !== 0 ? (
           activatedCardList.map((car) => (
-            <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'gallery'} />
+            <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars detailBtn />
           ))
         ) : (
           <>
             {previewHome &&
               preview.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'home'} />
+                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} cardCars carPrice={car.price} />
               ))}
             {previewGallery &&
               allCars.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'gallery'} />
+                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} cardCars carPrice={car.price} detailBtn />
               ))}
           </>
         )}
