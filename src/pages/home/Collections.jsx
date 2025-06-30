@@ -4,8 +4,6 @@ import { ArrowRightIcon } from "lucide-react";
 import Card from "../../components/Cards";
 
 const Collections = ({
-  id,
-  showButtonDetails,
   showFilterButtons,
   previewHome,
   previewGallery,
@@ -82,61 +80,55 @@ const Collections = ({
         <div className="grid grid-cols gap-4">
           <Button
             onClick={handleSelectCard}
-            className={`col-start-1 col-span-3 font-medium  ${
-              activatedButton === "Todos"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-1 col-span-3 font-medium  ${activatedButton === "Todos"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             Todos
           </Button>
           <Button
             onClick={handleSelectCard}
-            className={`col-start-1 col-end-3  font-medium ${
-              activatedButton === "Lamborghini"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-1 col-end-3  font-medium ${activatedButton === "Lamborghini"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             Lamborghini
           </Button>
           <Button
             onClick={handleSelectCard}
-            className={`col-start-3 font-medium ${
-              activatedButton === "Bugatti"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-3 font-medium ${activatedButton === "Bugatti"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             Bugatti
           </Button>
           <Button
             onClick={handleSelectCard}
-            className={`col-start-1 font-medium ${
-              activatedButton === "McLaren"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-1 font-medium ${activatedButton === "McLaren"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             McLaren
           </Button>
           <Button
             onClick={handleSelectCard}
-            className={`col-start-2 font-medium ${
-              activatedButton === "Audi"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-2 font-medium ${activatedButton === "Audi"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             Audi
           </Button>
           <Button
             onClick={handleSelectCard}
-            className={`col-start-3 font-medium ${
-              activatedButton === "Aston Martin"
-                ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
-                : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
-            }`}
+            className={`col-start-3 font-medium ${activatedButton === "Aston Martin"
+              ? "!bg-[var(--color-1)] !text-[var(--color-2)] border-2 border-[var(--color-2)]"
+              : "!bg-[var(--color-2)] !text-[var(--color-4)] border-2 border-zinc-300"
+              }`}
           >
             Aston Martin
           </Button>
@@ -152,102 +144,17 @@ const Collections = ({
       <div className="flex flex-col gap-8 mt-12">
         {activatedCardList.length !== 0 ? (
           activatedCardList.map((car) => (
-            <Card
-              key={car.id}
-              className="flex flex-col shadow max-w-10rem overflow-hidden hover:-translate-y-2 duration-400 !p-0"
-            >
-              <img
-                className="rounded-t-xl hover:scale-110 duration-700 object-cover"
-                src={car.image}
-                alt="Foto do veículo"
-              />
-              <div className="px-6 py-5 text-start">
-                <div className="flex flex-col text-md mb-4">
-                  <strong className="text-2xl text-[var(--color-4)]">
-                    {car.name}
-                  </strong>
-                  <span>{car.brand}</span>
-                  <span className="text-zinc-600">{car.hp}</span>
-                </div>
-                <span className="font-bold text-1xl ">R$ {car.price}</span>
-                {showFilterButtons && (
-                  <Button className={"mt-3"}>
-                    Ver detalhes
-                    <ArrowRightIcon className="size-5" />
-                  </Button>
-                )}
-              </div>
-            </Card>
+            <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'gallery'} />
           ))
         ) : (
           <>
             {previewHome &&
               preview.map((car) => (
-                <Card
-                  key={car.id}
-                  className="flex flex-col shadow max-w-10rem overflow-hidden hover:-translate-y-2 duration-400 !p-0"
-                >
-                  <div className="overflow-hidden ">
-                    <img
-                      className="rounded-t-xl group-hover:scale-110 duration-700"
-                      src={car.image}
-                      alt="Foto do veículo"
-                    />
-                  </div>
-                  <div className="px-6 pb-5 text-start">
-                    <div className="flex flex-col text-md mb-4">
-                      <strong className="text-2xl text-[var(--color-4)]">
-                        {car.name}
-                      </strong>
-                      <span>{car.brand}</span>
-                      <span className="text-zinc-600">{car.hp}</span>
-                    </div>
-                    <span className="font-bold text-1xl text-[var(--color-4)]">
-                      R$ {car.price}
-                    </span>
-                    {showFilterButtons && (
-                      <Button className={"mt-3"}>
-                        Ver detalhes
-                        <ArrowRightIcon className="size-5" />
-                      </Button>
-                    )}
-                  </div>
-                </Card>
+                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'home'} />
               ))}
             {previewGallery &&
               allCars.map((car) => (
-                <Card
-                  key={car.id}
-                  className={
-                    "flex flex-col !border-zinc-300 max-w-10rem overflow-hidden hover:-translate-y-2 duration-400 !p-0"
-                  }
-                >
-                  <div className="overflow-hidden">
-                    <img
-                      className="rounded-t-xl group-hover:scale-110 duration-700"
-                      src={car.image}
-                      alt="Foto do veículo"
-                    />
-                  </div>
-                  <div className="px-6 py-5 text-start">
-                    <div className="flex flex-col text-md mb-4">
-                      <strong className="text-2xl text-[var(--color-4)]">
-                        {car.name}
-                      </strong>
-                      <span>{car.brand}</span>
-                      <span className="text-zinc-600">{car.hp}</span>
-                    </div>
-                    <span className="font-bold text-2xl text-[var(--color-4)]">
-                      R$ {car.price}
-                    </span>
-                    {showFilterButtons && (
-                      <Button className={"mt-3"}>
-                        Ver detalhes
-                        <ArrowRightIcon className="size-5" />
-                      </Button>
-                    )}
-                  </div>
-                </Card>
+                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} cardCars={'gallery'} />
               ))}
           </>
         )}
