@@ -1,42 +1,36 @@
 import Button from "./Button"
 import { ArrowRightIcon } from "lucide-react"
 
-const Card = ({ className, cardId, cardCars, detailBtn, carImage, callToAction, carName, carBrand, carHp, carPrice }) => {
+const Card = ({ className, cardId, detailBtn, carImage, carName, carBrand, carHp, carPrice }) => {
     return (
         <div key={cardId} className={`${className} ${'flex flex-col shadow-lg max-w-10rem border border-zinc-200 rounded-xl overflow-hidden hover:-translate-y-2 duration-400 !p-0'} `}>
-            {
-                cardCars && (
-                    <>
-                        <div className="overflow-hidden">
-                            <img
-                                className="rounded-t-xl group-hover:scale-110 duration-700"
-                                src={carImage}
-                                alt="Foto do veículo"
-                            />
-                        </div>
-                        <div className="px-6 py-5 text-start">
-                            <div className="flex flex-col text-md mb-4">
-                                <strong className="text-2xl text-[var(--color-4)]">
-                                    {carName}
-                                </strong>
-                                <span>{carBrand}</span>
-                                <span className="text-zinc-600">{carHp}</span>
-                            </div>
-                            <span className="font-bold text-2xl text-[var(--color-4)]">
-                                R$ {carPrice}
-                            </span>
-                            {
-                                detailBtn && (
-                                    <Button className={"mt-3"}>
-                                        Ver detalhes
-                                        <ArrowRightIcon className="size-5" />
-                                    </Button>
-                                )
-                            }
-                        </div>
-                    </>
-                )
-            }
+            <div className="overflow-hidden">
+                <img
+                    className="rounded-t-xl group-hover:scale-110 duration-700"
+                    src={carImage}
+                    alt="Foto do veículo"
+                />
+            </div>
+            <div className="px-6 py-5 text-start">
+                <div className="flex flex-col text-md mb-4">
+                    <strong className="text-2xl text-[var(--color-4)]">
+                        {carName}
+                    </strong>
+                    <span>{carBrand}</span>
+                    <span className="text-zinc-600">{carHp}</span>
+                </div>
+                <span className="font-bold text-2xl text-[var(--color-4)]">
+                    R$ {carPrice}
+                </span>
+                {
+                    detailBtn && (
+                        <Button className={"mt-3"}>
+                            Ver detalhes
+                            <ArrowRightIcon className="size-5" />
+                        </Button>
+                    )
+                }
+            </div>
         </div>
     )
 }

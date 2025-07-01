@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import Gallery from "./pages/Gallery";
 import WhatsappLogo from "./assets/images/logos/whatsapp-logo.png";
 import About from "./pages/about/About";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
       </Routes>
       <Footer />
     </main>
