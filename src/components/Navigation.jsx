@@ -15,9 +15,9 @@ const NavigationTag = () => {
     }
 
     return (
-        <div onClick={handleOpeningModal} className={`${menuIsOpen ? 'translate-0 duration-700' : '-translate-x-full duration-700'} bg-trans fixed w-full h-full transition-transform `}>
-            <nav className={`w-70 border-r-1 z-30 bg-white border-r-zinc-200 h-full text-sm font-medium text-[var(--color-4)]`}>
-                <div className='flex flex-col' onClick={(e) => e.stopPropagation()}>
+        <div onClick={handleOpeningModal} className={`${!menuIsOpen && 'bg-transparent'} bg-trans fixed bg-[#000000c2] w-full h-full transition-transform `}>
+            <nav className={`${menuIsOpen ? 'translate-0 duration-700' : '-translate-x-full duration-700'} w-70 border-r-1 z-30 bg-white border-r-zinc-200 h-full text-sm font-medium text-[var(--color-4)]`}>
+                <div className='flex flex-col border-b border-zinc-300 pb-6' onClick={(e) => e.stopPropagation()}>
                     <NavLink to={'/'} className={`${menuIsOpen ? 'translate-0 duration-300' : '-translate-x-full duration-800'} px-6 pt-5`}>
                         {({ isActive }) => (
                             <span className={`${isActive && 'bg-[var(--color-4)] duration-100 !translate-x-0 text-white px-4.5 py-1.5 rounded-lg'} duration-200 flex hover:translate-x-1`}>Home</span>
@@ -43,9 +43,9 @@ const NavigationTag = () => {
                             <span className={`${isActive && 'bg-[var(--color-4)] duration-100 !translate-x-0 text-white px-4.5 py-1.5 rounded-lg'} duration-200 flex hover:translate-x-1`}>Contato</span>
                         )}
                     </NavLink>
-                    <Link className='px-6' to={'/budget'}>
+                    <div className='px-6'        >
                         <Button className={`${menuIsOpen ? 'translate-0 duration-800' : '-translate-x-full'} px-4`}>Solicitar orçamento</Button>
-                    </Link>
+                    </div>
                 </div>
             </nav>
         </div >

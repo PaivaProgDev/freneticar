@@ -35,7 +35,7 @@ const Services = () => {
         <div className='px-6 pt-6 overflow-hidden text-center pb-12 bg-[var(--color-bg)]'>
             <h1 className="font-black text-[var(--color-4)] text-5xl mb-6">Nossos Serviços</h1>
             <p className='text-[var(--color-4)] text-lg'>Oferecemos uma gama completa de serviços premium para atender todas as necessidades dos entusiastas de veículos esportivos.</p>
-            <div className="flex flex-col gap-12 mt-18">
+            <div className="flex flex-col gap-12 mt-12">
                 <CardServices
                     icon={<CarIcon className="size-8 text-white " />}
                     title={'Test Drive Exclusivo'}
