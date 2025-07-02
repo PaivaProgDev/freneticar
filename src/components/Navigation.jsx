@@ -15,7 +15,7 @@ const NavigationTag = () => {
     }
 
     return (
-        <div onClick={handleOpeningModal} className={`${!menuIsOpen && 'bg-transparent'} bg-trans fixed bg-[#000000c2] w-full h-full transition-transform `}>
+        <div onClick={handleOpeningModal} className={`${!menuIsOpen && 'invisible'} bg-trans fixed bg-[#000000c2] w-full h-full transition-transform `}>
             <nav className={`${menuIsOpen ? 'translate-0 duration-700' : '-translate-x-full duration-700'} w-70 border-r-1 z-30 bg-white border-r-zinc-200 h-full text-sm font-medium text-[var(--color-4)]`}>
                 <div className='flex flex-col border-b border-zinc-300 pb-6' onClick={(e) => e.stopPropagation()}>
                     <NavLink to={'/'} className={`${menuIsOpen ? 'translate-0 duration-300' : '-translate-x-full duration-800'} px-6 pt-5`}>
