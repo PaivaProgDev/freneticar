@@ -3,10 +3,10 @@ import { ArrowRightIcon } from "lucide-react"
 
 const Card = ({ className, cardId, detailBtn, carImage, carName, carBrand, carHp, carPrice }) => {
     return (
-        <div key={cardId} className={`${className} ${'flex flex-col shadow-lg max-w-10rem border border-zinc-200 rounded-xl overflow-hidden hover:-translate-y-2 duration-400 !p-0'} `}>
+        <div key={cardId} className={`${className} ${'flex flex-col md:min-w-[20rem] md:max-w-md shadow-lg md:hover:-translate-y-0 md:hover:-translate-x-1 border border-zinc-200 rounded-xl overflow-hidden hover:-translate-y-2 duration-400 !p-0'} `}>
             <div className="overflow-hidden">
                 <img
-                    className="rounded-t-xl group-hover:scale-110 duration-700"
+                    className="rounded-t-xl w-full group-hover:scale-110 duration-700"
                     src={carImage}
                     alt="Foto do veículo"
                 />

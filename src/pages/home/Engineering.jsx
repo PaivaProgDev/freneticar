@@ -42,7 +42,7 @@ const Engineering = () => {
         <div className='mt-26 mb-10'>
             <h3 className='text-5xl font-black text-[var(--color-4)]'>Engenharia de Precisão</h3>
             <p className='text-[var(--color-4)] text-lg mt-5 mb-16'>Cada veículo é uma obra-prima da engenharia automobilística, combinando performance, luxo e tecnologia de ponta.</p>
-            <div className='flex items-center flex-col gap-12'>
+            <div className='flex md:grid grid-cols-2 items-center flex-col gap-12'>
                 {cards.map((card) => (
                     <div className='flex gap-6 group ' key={card.id}>
                         <div className='bg-[var(--color-3)] duration-300 group-hover:bg-[var(--color-1)] group-hover:text-[var(--color-2)] w-fit  h-fit p-2 rounded-xl'>

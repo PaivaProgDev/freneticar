@@ -1,5 +1,4 @@
 import { ArrowRightIcon, Clock4, Mail, MapPin, Phone } from 'lucide-react'
-import React from 'react'
 import Button from '../../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -18,7 +17,7 @@ const Newsletter = () => {
                 </Button>
             </label>
             <p className='text-zinc-100 mt-10 text-sm'>Sem spam. Apenas conteúdo premium sobre carros esportivos.</p>
-            <div className='border-t flex flex-col gap-14 pt-20 mt-18 border-zinc-700 w-full'>
+            <div className='border-t md:grid grid-cols-2 flex flex-col gap-14 pt-20 mt-18 border-zinc-700'>
                 <div className='flex flex-col items-center'>
                     <div className='bg-zinc-200 p-4 rounded-xl w-fit'>
                         <Mail />

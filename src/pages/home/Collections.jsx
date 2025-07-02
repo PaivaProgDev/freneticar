@@ -147,7 +147,7 @@ const Collections = ({
             <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
           ))
         ) : (
-          <>
+          <div className="md:flex p-2 pb-6 gap-10 overflow-y-auto">
             {previewHome &&
               preview.map((car) => (
                 <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
@@ -156,7 +156,7 @@ const Collections = ({
               allCars.map((car) => (
                 <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
               ))}
-          </>
+          </div>
         )}
       </div>
     </div>

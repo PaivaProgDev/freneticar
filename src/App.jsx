@@ -11,7 +11,7 @@ import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full">
       <Link
         aria-label="Conversar pelo WhatsApp"
         to={
