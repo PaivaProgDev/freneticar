@@ -77,7 +77,7 @@ const Collections = ({
   return (
     <div className="mt-16">
       {showFilterButtons && (
-        <div className="grid grid-cols gap-4">
+        <div className="grid place-self-center w-full md:max-w-200 grid-cols gap-4">
           <Button
             onClick={handleSelectCard}
             className={`col-start-1 col-span-3 font-medium  ${activatedButton === "Todos"
@@ -141,24 +141,26 @@ const Collections = ({
           veículos encontrados
         </p>
       )}
-      <div className="flex flex-col gap-8 mt-12">
-        {activatedCardList.length !== 0 ? (
-          activatedCardList.map((car) => (
-            <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
-          ))
-        ) : (
-          <div className="md:flex p-2 pb-6 gap-10 overflow-y-auto">
-            {previewHome &&
-              preview.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
-              ))}
-            {previewGallery &&
-              allCars.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
-              ))}
-          </div>
-        )}
-      </div>
+      {activatedCardList.length !== 0 ? (
+        <div className="mt-10">
+          {
+            activatedCardList.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
+            ))
+          }
+        </div>
+      ) : (
+        <div className="flex flex-row mt-10 p-2 pb-6 gap-10 overflow-y-auto">
+          {previewHome &&
+            preview.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
+            ))}
+          {previewGallery &&
+            allCars.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
+            ))}
+        </div>
+      )}
     </div>
   );
 };
