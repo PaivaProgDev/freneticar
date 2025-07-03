@@ -34,8 +34,11 @@ const Collections = ({
 
   const handleScroll = (e) => {
     const el = e.target;
-    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
-    setIsEnd(atEnd);
+
+    if (el.scrollRigt) {
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
+      setIsEnd(atEnd);
+    }
   };
 
   const preview = [
@@ -153,7 +156,7 @@ const Collections = ({
           <div className={`${isEnd && 'justify-start'} flex justify-end mt-10`}>
             <ChevronsRightIcon className={`${isEnd && 'rotate-180 '} animate-ping size-5`} />
           </div>
-          <div onScroll={handleScroll} className="mt-3 flex flex-row p-2 pb-6 gap-10 overflow-y-auto">
+          <div onScroll={handleScroll} className="mt-3 flex justify-center flex-row p-2 pb-6 gap-10 overflow-y-auto">
             {
               activatedCardList.map((car) => (
                 <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
@@ -167,7 +170,7 @@ const Collections = ({
           <div className={`${isEnd && 'justify-start'} flex justify-end mt-10`}>
             <ChevronsRightIcon className={`${isEnd && 'rotate-180 '} animate-ping size-5`} />
           </div>
-          <div onScroll={handleScroll} className="flex flex-row mt-3 pt-2 pb-6 gap-10 overflow-y-auto">
+          <div onScroll={handleScroll} className="flex flex-row mt-3 pt-2 pb-6 gap-6 overflow-y-auto">
             {previewHome &&
               preview.map((car) => (
                 <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
