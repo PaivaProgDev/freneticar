@@ -35,14 +35,14 @@ const Contact = () => {
     ]
 
     return (
-        <div className='px-6 pt-6 overflow-hidden text-center pb-12 bg-[var(--color-bg)]'>
+        <div className='px-6 pt-6 overflow-hidden m-auto max-w-7xl text-center pb-12 '>
             <h1 className='text-5xl font-black text-[var(--color-4)]'>Entre em Contato</h1>
-            <p className='text-[var(--color-4)] text-lg mt-5 mb-16'>Cada veículo é uma obra-prima da engenharia automobilística, combinando performance, luxo e tecnologia de ponta.</p>
+            <p className='text-[var(--color-4)] text-lg mt-5 mb-26'>Cada veículo é uma obra-prima da engenharia automobilística, combinando performance, luxo e tecnologia de ponta.</p>
             <h3 className='font-black text-[var(--color-4)] text-start text-4xl'>Informações de Contato</h3>
-            <ul className="flex flex-col gap-8 my-10">
+            <ul className="flex justify-center md:grid md:grid-cols-2 place-self-center items-center flex-col gap-8 my-10">
                 {
                     cardsContact.map((card) => (
-                        <li className="flex gap-6 shadow-lg rounded-xl p-6 border border-zinc-200" key={card.id}>
+                        <li className="flex gap-6 w-full max-w-sm shadow-lg bg-white rounded-xl p-6 border border-zinc-200" key={card.id}>
                             <span className="bg-zinc-200 h-fit p-4 rounded-xl text-[var(--color-4)]">
                                 {card.icon}
                             </span>
@@ -60,9 +60,11 @@ const Contact = () => {
                 <p className="text-white">Nossa equipe de especialistas está pronta para atender você com toda a atenção que você merece. Agende uma visita ao nosso showroom.</p>
                 <Button className={'bg-white !text-[var(--color-4)]'}>Agendar Visita</Button>
             </div>
-            <FormContact />
-            <ul className="mt-20 flex flex-col gap-8">
-                <li className="flex flex-col items-center text-center gap-6 shadow-lg rounded-xl p-6 border border-zinc-200">
+            <div className="flex justify-center">
+                <FormContact />
+            </div>
+            <ul className="mt-20 flex items-center flex-col gap-8 justify-center">
+                <li className="flex max-w-xl w-full bg-white flex-col items-center text-center gap-6 shadow-lg rounded-xl p-6 border border-zinc-200">
                     <span className="bg-zinc-200 h-fit p-4 rounded-xl text-[var(--color-4)]">
                         <MessageCircleIcon />
                     </span>
@@ -72,7 +74,7 @@ const Contact = () => {
                         <Button className={'!w-fit px-10'}>Iniciar Chat</Button>
                     </div>
                 </li>
-                <li className="flex flex-col items-center text-center gap-5 shadow-lg rounded-xl p-6 border border-zinc-200">
+                <li className="flex max-w-xl w-full bg-white flex-col items-center text-center gap-5 shadow-lg rounded-xl p-6 border border-zinc-200">
                     <span className="bg-zinc-200 h-fit p-4 rounded-xl text-[var(--color-4)]">
                         <CalendarIcon />
                     </span>
@@ -82,7 +84,7 @@ const Contact = () => {
                         <Button className={'!w-fit px-10'}>Agendar</Button>
                     </div>
                 </li>
-                <li className="flex flex-col items-center text-center gap-5 shadow-lg rounded-xl p-6 border border-zinc-200">
+                <li className="flex max-w-xl w-full bg-white flex-col items-center text-center gap-5 shadow-lg rounded-xl p-6 border border-zinc-200">
                     <span className="bg-zinc-200 h-fit p-4 rounded-xl text-[var(--color-4)]">
                         <PhoneIcon />
                     </span>

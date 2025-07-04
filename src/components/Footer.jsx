@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     const { menuIsOpen } = useActions()
     return (
-        <footer className='border-t-2 border-zinc-100 px-6 pt-6'>
+        <footer className='border-t bg-white  border-zinc-300 px-6 pt-6'>
             <Logo />
             <p className='text-[var(--color-4)] my-5'>Sua paixão por veículos esportivos começa aqui. Experiência premium em cada detalhe.</p>
             <SocialMedia />

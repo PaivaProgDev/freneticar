@@ -3,7 +3,7 @@ import Button from "../../components/Button"
 
 const FormContact = () => {
     return (
-        <form className="shadow-lg flex w-full mt-18 p-8 flex-col gap-10 border border-zinc-200 rounded-xl">
+        <form className="shadow-lg flex items-center w-full max-w-xl bg-white mt-18 p-8 flex-col gap-10 border border-zinc-200 rounded-xl">
             <legend className="text-2xl text-start text-[var(--color-4)] font-black">Envie uma Mensagem</legend>
             <label className="w-full flex flex-col gap-2 text-start">
                 <span className="text-sm font-bold  text-[var(--color-4)]">Nome Completo</span>

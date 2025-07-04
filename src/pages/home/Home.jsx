@@ -15,7 +15,7 @@ import Newsletter from "./Newsletter";
 
 const Home = () => {
   return (
-    <section className="overflow-hidden m-auto w-full max-w-300">
+    <section className="overflow-hidden m-auto w-full max-w-7xl">
       <div className="px-6 pt-6 md:px-20 overflow-hidden relative pb-12 bg-[var(--color-bg)]">
         <h1 className="font-extrabold text-5xl md:text-7xl md:mt-20  md:w-50">Qualidade & Segurança</h1>
         <img
