@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/Button";
-import { ArrowRightIcon, ChevronLeft, ChevronRight, ChevronsRightIcon } from "lucide-react";
 import Card from "../../components/Cards";
 
 const Collections = ({
@@ -10,7 +9,6 @@ const Collections = ({
 }) => {
   const [activatedButton, setActivatedButton] = useState("Todos");
   const [activatedCardList, setActivatedCardList] = useState([]);
-  const [isEnd, setIsEnd] = useState(false);
   const [allCars, setAllCars] = useState([]);
 
   useEffect(() => {
@@ -30,15 +28,6 @@ const Collections = ({
     // Filtra os carros de acordo com a escolha do usuário
     const filteredCard = allCars.filter((car) => car.brand === targetValue);
     setActivatedCardList(filteredCard);
-  };
-
-  const handleScroll = (e) => {
-    const el = e.target;
-
-    if (el.scrollRigt) {
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
-      setIsEnd(atEnd);
-    }
   };
 
   const preview = [
@@ -152,35 +141,25 @@ const Collections = ({
         </p>
       )}
       {activatedCardList.length !== 0 ? (
-        <>
-          <div className={`${isEnd && 'justify-start'} flex justify-end mt-10`}>
-            <ChevronsRightIcon className={`${isEnd && 'rotate-180 '} animate-ping size-5`} />
-          </div>
-          <div onScroll={handleScroll} className="mt-3 flex justify-center flex-row p-2 pb-6 gap-10 overflow-y-auto">
-            {
-              activatedCardList.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
-              ))
-            }
+        <div className="mt-3 flex justify-center flex-row p-2 pb-6 gap-10 overflow-y-auto">
+          {
+            activatedCardList.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
+            ))
+          }
+        </div>
 
-          </div>
-        </>
       ) : (
-        <>
-          <div className={`${isEnd && 'justify-start'} flex justify-end mt-10`}>
-            <ChevronsRightIcon className={`${isEnd && 'rotate-180 '} animate-ping size-5`} />
-          </div>
-          <div onScroll={handleScroll} className="flex flex-row mt-3 pt-2 pb-6 gap-6 overflow-y-auto">
-            {previewHome &&
-              preview.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
-              ))}
-            {previewGallery &&
-              allCars.map((car) => (
-                <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
-              ))}
-          </div>
-        </>
+        <div className="flex flex-row mt-3 pt-2 pb-6 gap-6 overflow-y-auto">
+          {previewHome &&
+            preview.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} />
+            ))}
+          {previewGallery &&
+            allCars.map((car) => (
+              <Card key={car.id} carBrand={car.brand} carHp={car.hp} carImage={car.image} carName={car.name} carPrice={car.price} detailBtn />
+            ))}
+        </div>
       )}
     </div>
   );

@@ -1,7 +1,6 @@
 import { NavLink, Link } from 'react-router-dom'
 import { useActions } from '../context/userActions'
 import Button from './Button'
-import { useEffect } from 'react'
 
 const NavigationTag = () => {
     const { menuIsOpen, handleOpeningModal } = useActions()

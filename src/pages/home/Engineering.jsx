@@ -1,9 +1,7 @@
 import { Settings } from 'lucide-react'
-import { BsLightningCharge, BsShieldCheck } from 'react-icons/bs'
-import { CiSettings } from 'react-icons/ci'
+import { BsLightningCharge } from 'react-icons/bs'
 import { MdSpeed } from 'react-icons/md'
 import { FiShield } from 'react-icons/fi'
-import Card from '/src/components/Cards'
 
 const Engineering = () => {
 

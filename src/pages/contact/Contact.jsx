@@ -35,7 +35,7 @@ const Contact = () => {
     ]
 
     return (
-        <div className='px-6 pt-6 overflow-hidden m-auto max-w-7xl text-center pb-12 '>
+        <div className='px-6 pt-6 overflow-hidden m-auto max-w-6xl text-center pb-12 '>
             <h1 className='text-5xl font-black text-[var(--color-4)]'>Entre em Contato</h1>
             <p className='text-[var(--color-4)] text-lg mt-5 mb-26'>Cada veículo é uma obra-prima da engenharia automobilística, combinando performance, luxo e tecnologia de ponta.</p>
             <h3 className='font-black text-[var(--color-4)] text-start text-4xl'>Informações de Contato</h3>

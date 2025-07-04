@@ -32,7 +32,7 @@ const Services = () => {
     ]
 
     return (
-        <div className='px-6 pt-6 overflow-hidden max-w-7xl m-auto text-center pb-12 '>
+        <div className='px-6 pt-6 overflow-hidden max-w-6xl m-auto text-center pb-12 '>
             <h1 className="font-black text-[var(--color-4)] text-5xl mb-6">Nossos Serviços</h1>
             <p className='text-[var(--color-4)] text-lg'>Oferecemos uma gama completa de serviços premium para atender todas as necessidades dos entusiastas de veículos esportivos.</p>
             <div className="flex flex-col md:flex-row justify-center md:flex-wrap  gap-10 mt-20">

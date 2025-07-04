@@ -1,4 +1,4 @@
-import { MedalIcon, UsersIcon, LucideLoaderPinwheel, CalendarIcon, CheckCircle, GemIcon, HandshakeIcon, ShieldIcon } from 'lucide-react'
+import { MedalIcon, UsersIcon, LucideLoaderPinwheel, CalendarIcon, GemIcon, HandshakeIcon, ShieldIcon } from 'lucide-react'
 import lamboRed from './images/Lambo.red.png'
 import larenWhite from './images/Laren.white.png'
 import CTA from './CTA'
@@ -6,10 +6,10 @@ import CTA from './CTA'
 const About = () => {
     return (
         <div className='px-6 pt-6 overflow-hidden text-start pb-12'>
-            <div className='w-full max-w-250 m-auto'>
+            <div className='w-full max-w-6xl m-auto'>
                 <h1 className="font-extrabold text-center text-[var(--color-4)] text-5xl mb-6">Nossa História</h1>
                 <p className=' text-zinc-600 text-center'>Há mais de 15 anos realizando sonhos automotivos e conectando pessoas aos veículos esportivos mais exclusivos do mundo.</p>
-                <div className='relative mb-16 flex items-center justify-center'>
+                <div className='relative mb-16 mt-10 flex items-center justify-center'>
                     <div className='bg-amber-500 rounded-xl w-full max-w-70 sm:max-w-150 skew-5 h-65 mt-9 '></div>
                     <img className='w-full min-w-130 max-w-60 absolute top-0' src={lamboRed} alt="Lamborghini vermelha" />
                 </div>

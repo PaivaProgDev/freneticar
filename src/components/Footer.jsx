@@ -1,10 +1,8 @@
-import { useActions } from '../context/userActions'
 import Logo from './Logo'
 import SocialMedia from './SocialMedia'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-    const { menuIsOpen } = useActions()
     return (
         <footer className='border-t bg-white  border-zinc-300 px-6 pt-6'>
             <Logo />
