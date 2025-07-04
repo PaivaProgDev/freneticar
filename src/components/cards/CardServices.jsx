@@ -2,7 +2,7 @@ import Button from "../Button"
 
 const CardServices = ({ icon, title, subtitle, paragrafh, list }) => {
     return (
-        <div className={'border-zinc-200 bg-white rounded-xl border-2 p-10 w-full flex-col shadow-lg '}>
+        <div className={'border-zinc-200 bg-white rounded-xl md:w-md border-2 p-10 w-full flex-col shadow-lg '}>
             <div className="flex flex-col gap-4">
                 <div className="p-5 rounded-xl duration-200 text-white bg-[var(--color-4)] h-fit w-fit">
                     {icon}

@@ -32,10 +32,10 @@ const Services = () => {
     ]
 
     return (
-        <div className='px-6 pt-6 overflow-hidden text-center pb-12 bg-[var(--color-bg)]'>
+        <div className='px-6 pt-6 overflow-hidden max-w-7xl m-auto text-center pb-12 '>
             <h1 className="font-black text-[var(--color-4)] text-5xl mb-6">Nossos Serviços</h1>
             <p className='text-[var(--color-4)] text-lg'>Oferecemos uma gama completa de serviços premium para atender todas as necessidades dos entusiastas de veículos esportivos.</p>
-            <div className="flex flex-col gap-12 mt-12">
+            <div className="flex flex-col md:flex-row justify-center md:flex-wrap  gap-10 mt-20">
                 <CardServices
                     icon={<CarIcon className="size-8 text-white " />}
                     title={'Test Drive Exclusivo'}
@@ -95,10 +95,10 @@ const Services = () => {
             </div>
             <h1 className="font-black text-[var(--color-4)] text-5xl mt-24 mb-6">Por que Escolher a SportCars?</h1>
             <p className='text-[var(--color-4)] mt-10 mb-20 text-lg'>Nossos diferenciais fazem toda a diferença na sua experiência.</p>
-            <div className="flex items-center flex-col gap-12">
+            <div className="flex items-center flex-col gap-1 md:grid md:grid-cols-2 place-self-center md:gap-20">
                 {
                     attributes.map((attr) => (
-                        <div className='flex flex-col items-center  gap-6 group' key={attr.id}>
+                        <div className='flex flex-col items-center gap-6 group ' key={attr.id}>
                             <span className='bg-[var(--color-3)] duration-300 group-hover:bg-[var(--color-4)] group-hover:text-[var(--color-2)] w-fit  h-fit p-2 rounded-xl'>
                                 {attr.icon}
                             </span>
@@ -115,7 +115,7 @@ const Services = () => {
                 <p className="my-6">Entre em contato conosco e descubra como podemos tornar sua experiência automotiva única.</p>
                 <div className="flex flex-col w-full gap-4 mt-6">
                     <Button className={'bg-white hover:-translate-y-1 !border-0 !text-[var(--color-4)]'}>Falar com Especialista</Button>
-                    <Button>Agendar o Test Drive</Button>
+                    <Button>Agendar Test Drive</Button>
                 </div>
             </div>
         </div>
